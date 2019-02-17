@@ -1,0 +1,14 @@
+
+body {
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+nav.navbar {
+    background-color:honeydew;
+    margin-bottom: 30px;
+}
+
+.is-completed {
+    text-decoration: line-through;
+}
