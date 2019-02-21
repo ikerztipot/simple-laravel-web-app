@@ -17,10 +17,15 @@
             <li class="navbar-item"><a href="/projects">Projects</a></li>
             <li class="navbar-item"><a href="/contact">Contact</a></li>
             <li class="navbar-item"><a href="/about">About</a></li>
+            <li class="navbar-item"><a href="/user">User</a></li>
+        </ul>
+        <ul class="navbar-menu">
+            <li class="navbar-item">Hello {{ auth()->user() ? auth()->user()->name : 'guest' }}</li>
         </ul>
     </nav>
-    
-
+    <div class="container">
     @yield('content')
+    </div>
+
 </body>
 </html>

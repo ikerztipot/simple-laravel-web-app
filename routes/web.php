@@ -17,12 +17,14 @@ Route::get('/contact', 'PagesController@contact');
 
 Route::get('/about', 'PagesController@about');
 
-// Automatic routing version
+// Automatic routing version & middleware for restric management os the projects (another way to handle authorization)
+// Route::resource('projects', 'ProjectsController')->middleware('can:manage,project')
 Route::resource('projects', 'ProjectsController');
+;
 
 // Manual routing version
 Route::patch('/tasks/{task}', 'ProjectsTasksController@update');
-Route::post('projects/{project}/tasks', 'ProjectsTasksController@create');
+Route::post('/projects/{project}/tasks', 'ProjectsTasksController@create');
 
 // Route::get('/projects', 'ProjectsController@index');
 
@@ -38,3 +40,7 @@ Route::post('projects/{project}/tasks', 'ProjectsTasksController@create');
 
 // Route::delete('/project/{project}', 'ProjectsController@destroy');
 
+// Routes for Auth funcionality
+Auth::routes();
+
+Route::get('/user', 'PagesController@user')->name('user');

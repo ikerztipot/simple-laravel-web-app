@@ -1,14 +1,33 @@
+:root {
+    font-size: 1em;
+}
 
 body {
-    padding: 20px;
+    padding: 1em;
     font-family: 'Courier New', Courier, monospace; 
 }
 
 nav.navbar {
     background-color:honeydew;
-    margin-bottom: 30px;
+    margin-bottom: 1.5em;
+}
+
+a {
+    color: brown;
 }
 
 .is-completed {
     text-decoration: line-through;
+}
+
+@media (min-width: 800px) {
+    :root {
+        font-size: 1.025em;
+    }
+}
+
+@media (min-width: 1200px) {
+    :root {
+        font-size: 1.125em;
+    }
 }

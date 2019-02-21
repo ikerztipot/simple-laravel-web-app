@@ -9,11 +9,12 @@ class PagesController extends Controller
 {
     public function home()
     {
-        $projects = Project::all();
+        return view('index');
+    }
 
-        return view('projects.index', [
-            'projects' => $projects
-        ]);
+    public function user()
+    {
+        return view('home');
     }
 
     public function contact()
