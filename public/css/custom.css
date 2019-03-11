@@ -1,10 +1,21 @@
 :root {
     font-size: 1em;
+    box-sizing: border-box;
+
+    --main-font-color: #0A0000;
+    --main-font-family: 'Courier New', Courier, monospace; 
+}
+
+*, 
+::before, 
+::after {
+    box-sizing: inherit;
 }
 
 body {
     padding: 1em;
-    font-family: 'Courier New', Courier, monospace; 
+    font-family: var(--main-font-family);
+    color: var(--main-font-color);
 }
 
 nav.navbar {

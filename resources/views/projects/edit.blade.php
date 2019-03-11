@@ -32,6 +32,8 @@
         </div>
     </form>
 
+    @include('errors')
+    
     <form class="form" method="POST" action="/projects/{{ $project->id }}">
     @method('DELETE')
     @csrf

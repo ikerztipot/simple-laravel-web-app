@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
 
     <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/custom.css') }}"/>
-    <script src="main.js"></script>
+    <script src="{{ asset('js/main.js') }}" type="text/javascript" ></script>
 </head>
 <body>
     <nav class="navbar">
