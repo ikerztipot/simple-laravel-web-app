@@ -23,6 +23,10 @@ nav.navbar {
     margin-bottom: 1.5em;
 }
 
+.flash-message {
+    background-color: #AABB00;
+}
+
 a {
     color: brown;
 }

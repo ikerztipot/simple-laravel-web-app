@@ -69,6 +69,9 @@ class ProjectsController extends Controller
         // Fire a event when project has been created (For, for example, send a email)
         event(new ProjectCreated($project));
 
+        // Send a flash notification to view (with helper function stored in App/helpers.php file)
+        flash('Project successfully created');
+
         return redirect('/projects');
     }
 

@@ -7,6 +7,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Mail\ProjectCreated as ProjectCreatedMail;
 use Illuminate\Support\Facades\Mail;
+use App\Notifications\NewProjectCreated;
 
 class SendProjectCreatedNotification
 {
@@ -28,8 +29,13 @@ class SendProjectCreatedNotification
      */
     public function handle(ProjectCreated $event)
     {
-        Mail::to($event->project->owner->email)->send(
+        // Send notification to multiple channels
+        $event->project->owner->notify(new NewProjectCreated($event->project));
+
+        // Send an email
+        /* Mail::to($event->project->owner->email)->send(
             new ProjectCreatedMail($event->project)
         );
+        */
     }
 }

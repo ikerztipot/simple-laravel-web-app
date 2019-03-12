@@ -11,4 +11,9 @@
     @endforeach
 </ul>
 <a class="button is-link" href="/projects/create">Add project</a>
+
+@if(session('message'))
+<div class="flash-message">{{ session('message') }}</div>
+@endif
+
 @endsection
